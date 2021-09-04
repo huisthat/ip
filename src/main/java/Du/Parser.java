@@ -10,7 +10,7 @@ public class Parser {
     private TaskList tasks;
 
     /**
-     * Public constructor for Parser
+     * public constructor for Parser
      * @param tasks
      */
     public Parser(TaskList tasks) {
@@ -21,7 +21,6 @@ public class Parser {
      * Takes in commands from user and parse them
      */
     public String parse(String command) {
-        assert command != null : "Command cannot be nothing!";
         // remove any extra spaces if there is any
         command = command.strip();
         String response = "";
@@ -32,7 +31,6 @@ public class Parser {
         } else {
             response = parse_two_arguments(command);
         }
-        assert response != "" : "there's no bot response?";
         return response;
     }
 
